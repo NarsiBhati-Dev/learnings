@@ -1,0 +1,12 @@
+{
+  "user1": {
+    "name": "Narsi",
+    "age": 24,
+    "isDeveloper": true,
+    "skills": ["javascript", "Go", "Nextjs"],
+    "address": {
+      "city": "Delhi",
+      "country": "India"
+    }
+  }
+}
