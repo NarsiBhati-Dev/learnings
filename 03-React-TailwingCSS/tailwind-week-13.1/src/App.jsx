@@ -1,12 +1,10 @@
-function App() {
-  const [count, setCount] = useState(0);
+import OtpInput from "./components/otp-input";
 
+function App() {
   return (
-    <main>
-      <div className="bg-green-500"> Hi there from first div</div>
-      <div className="bg-red-500"> Hi there from first div</div>
-      <div className="bg-pink-200"> Hi there from first div</div>
-    </main>
+    <div className=" flex justify-center items-center h-screen w-screen">
+      <OtpInput number={10} />
+    </div>
   );
 }
 
