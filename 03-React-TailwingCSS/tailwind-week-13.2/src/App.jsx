@@ -7,9 +7,7 @@ import OptionCard from "./components/option-card";
 const App = () => {
   return (
     <main className="flex">
-      <div>
-        <Sidebar />
-      </div>
+      <Sidebar />
 
       <section className="bg-white w-full h-screen">
         <div className="h-56 bg-black md:block hidden"></div>

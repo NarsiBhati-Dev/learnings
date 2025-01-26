@@ -14,7 +14,7 @@ const Sidebar = () => {
 
   if (!toggle) {
     return (
-      <div className="fixed top-0 left-0 transition-all duration-300">
+      <div className="fixed top-0 left-0 transition-all duration-300 shadow-2xl">
         <button
           onClick={() => setToggle(!toggle)}
           className="cursor-pointer bg-transparent  md:text-white text-black"
