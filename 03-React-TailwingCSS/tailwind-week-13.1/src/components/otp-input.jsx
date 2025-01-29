@@ -39,7 +39,7 @@ const OtpInput = ({ number }) => {
         <input
           type="text"
           key={index}
-          value={otps[index]}
+          value={otp}
           maxLength={1}
           onChange={(e) => onChangeHandler(e, index)}
           onKeyDown={(e) => onKeyDownHandler(e, index)}
