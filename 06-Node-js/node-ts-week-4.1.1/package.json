@@ -13,6 +13,7 @@
     "commander": "^13.1.0"
   },
   "scripts": {
-    "node": "bun run node-application.ts create -n"
+    "node": "bun run staters.ts create",
+    "express": "bun run staters.ts create -e"
   }
 }
