@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="todo">
+        <h2 id="title"></h2>
+        <p id="description"></p>
+        <p id="status"></p>
+    </div>
+    <button onclick="fetchData()">fetch data</button>
+</body>
+<script>
+    async function fetchData() {
+        const response = await fetch("http://localhost:3000/todo")
+        const data = await response.json()
+
+        document.getElementById("title").innerHTML = data.title
+        document.getElementById("description").innerHTML = data.description
+        document.getElementById("status").innerHTML = data.status
+    }
+</script>
+
+</html>
