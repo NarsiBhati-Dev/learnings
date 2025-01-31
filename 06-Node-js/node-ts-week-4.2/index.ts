@@ -28,7 +28,7 @@ app.get("/", (_req, res) => {
 
 app.post("/create-todo", (req, res) => {
   const { title, description, status }: Todo = req.body;
-  const id: string = `${todos.size + 1}`;
+  const id: string = crypto.randomUUID();
   const isAdd: boolean = setData(id, { title, description, status });
 
   if (!isAdd) {
