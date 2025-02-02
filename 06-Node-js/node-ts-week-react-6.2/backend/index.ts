@@ -10,12 +10,18 @@ import logger from "./middlewares/logger";
 
 import { Status } from "./enum";
 import type { AuthRequest } from "./types/types";
+import cors from "cors";
 
 const app = express();
 const JWT_SECRET = "myRandomKey";
 const users = new Map<string, string>();
 
 app.use(express.json());
+app.use(
+  cors({
+    origin: "http://localhost:5173/",
+  })
+);
 
 app.post("/signup", logger, inputValidation, (req: Request, res: Response) => {
   const { username, password } = req.body;
@@ -34,7 +40,7 @@ app.post("/signup", logger, inputValidation, (req: Request, res: Response) => {
   }
 });
 
-app.post("/signin", logger, inputValidation, (req: Request, res: Response) => {
+app.post("/login", logger, inputValidation, (req: Request, res: Response) => {
   const { username, password } = req.body;
   if (!users.has(username)) {
     res.status(Status.NotFound).json({
