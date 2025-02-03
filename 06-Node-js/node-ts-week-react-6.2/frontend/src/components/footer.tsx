@@ -5,7 +5,7 @@ import LinkedinIcon from "../assets/linkedin";
 import GithubIcon from "../assets/github-icon";
 
 const linkStyle =
-  "hover:text-amber-500 flex text-xl items-center gap-2 hover:scale-120 hover:-translate-y-2 transition-all duration-300";
+  "hover:text-blue-500 flex text-xl items-center gap-2 hover:scale-120 hover:-translate-y-2 transition-all duration-300";
 
 const Footer: React.FC = () => {
   return (

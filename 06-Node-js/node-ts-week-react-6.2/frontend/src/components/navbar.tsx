@@ -15,14 +15,14 @@ const Navbar: React.FC = () => {
         <div className="text-lg md:block hidden">
           <button
             onClick={() => navigate("/signup")}
-            className="py-2 px-4 bg-amber-500 mx-1 rounded-xl text-white hover:bg-amber-100 hover:text-black cursor-pointer"
+            className="py-2 px-4 bg-blue-500 mx-1 rounded-xl text-white hover:bg-blue-300  cursor-pointer"
           >
             Sign-up
           </button>
 
           <button
             onClick={() => navigate("/login")}
-            className="py-2 px-4 mx-1 cursor-pointer text-white hover:text-amber-500"
+            className="py-2 px-4 mx-1 cursor-pointer text-white hover:text-blue-500"
           >
             Login
           </button>

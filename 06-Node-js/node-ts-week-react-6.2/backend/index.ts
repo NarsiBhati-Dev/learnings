@@ -17,11 +17,7 @@ const JWT_SECRET = "myRandomKey";
 const users = new Map<string, string>();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: "http://localhost:5173/",
-  })
-);
+app.use(cors());
 
 app.post("/signup", logger, inputValidation, (req: Request, res: Response) => {
   const { username, password } = req.body;
