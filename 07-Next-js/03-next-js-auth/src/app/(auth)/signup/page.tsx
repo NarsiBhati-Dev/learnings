@@ -4,10 +4,12 @@ import InputBox from "@/components/input-box";
 import Link from "next/link";
 import React, { useRef } from "react";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const SignupPage = () => {
   const usernameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
+  const router = useRouter();
 
   const Signup = async () => {
     const user = usernameRef.current?.value;
@@ -23,6 +25,8 @@ const SignupPage = () => {
         username: user,
         password: pass,
       });
+
+      router.push("/login");
     } catch (e) {
       console.log("error");
     }

@@ -3,11 +3,14 @@
 import InputBox from "@/components/input-box";
 import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useRef } from "react";
 
 const LoginPage = () => {
   const usernameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
+
+  const navigate = useRouter();
 
   const Login = async () => {
     const user = usernameRef.current?.value;
@@ -23,6 +26,8 @@ const LoginPage = () => {
         username: user,
         password: pass,
       });
+
+      // navigate.push()
     } catch (e) {
       console.log("error");
     }
