@@ -52,7 +52,7 @@ app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to the Todo API!");
 });
 
-const server = app.listen(3000, () => {
+const server = app.listen(3001, () => {
   console.log("[ server ] : ", chalk.green.bold("ON"));
 });
 
