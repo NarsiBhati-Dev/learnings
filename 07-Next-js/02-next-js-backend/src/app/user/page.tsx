@@ -1,36 +1,22 @@
-import TodoCard from "@/components/todo-card";
 import axios from "axios";
 import React from "react";
 
-const getTodo = async () => {
-  const response = await axios.get("http://localhost:3001/todo");
-  return response.data;
+const getUserData = async () => {
+  const Response = axios.get("http://localhost:3000/api/v1/user/details");
+  return (await Response).data;
 };
 
-interface TodoMapProps {
-  id: string;
-  title: string;
-  description: string;
-  complete: boolean;
-}
-
-const TodoPage = async () => {
-  const data = await getTodo();
+const UserPage: React.FC = async () => {
+  const userData = await getUserData();
 
   return (
-    <section className="flex justify-center items-center h-screen w-screen">
-      {" "}
-      {data.todos.map((todo: TodoMapProps) => (
-        <TodoCard
-          key={todo.id}
-          user={data.user}
-          title={todo.title}
-          description={todo.description}
-          complete={todo.complete}
-        />
-      ))}
+    <section className="h-screen w-screen flex justify-center items-center">
+      <div className="bg-white p-4 rounded-md text-black">
+        <h1 className="font-extrabold">username : {userData.username} </h1>
+        <h1 className="font-extrabold">username : {userData.email} </h1>
+      </div>
     </section>
   );
 };
 
-export default TodoPage;
+export default UserPage;
