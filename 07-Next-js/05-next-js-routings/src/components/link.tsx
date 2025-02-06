@@ -10,7 +10,7 @@ const LinkCo: React.FC<LinkCoProps> = ({ link, title }) => {
   return (
     <Link
       href={link}
-      className="border w-full px-8 py-2 rounded-md m-4 text-center"
+      className="border w-full px-8 py-2 rounded-md mb-4 block text-center"
     >
       {title}
     </Link>
