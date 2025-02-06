@@ -1,9 +1,9 @@
 import React from "react";
 
+type CoursesIdType = Promise<{ courseId: string }>;
+
 interface CoursePageParams {
-  params: {
-    courseId: string;
-  };
+  params: CoursesIdType;
 }
 
 const CoursePage = async ({ params }: CoursePageParams) => {

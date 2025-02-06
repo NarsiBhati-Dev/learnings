@@ -1,10 +1,10 @@
 import axios from "axios";
 import React from "react";
 
+type PostIdType = Promise<{ postId: string }>;
+
 interface BlogPostParams {
-  params: {
-    postId: string;
-  };
+  params: PostIdType;
 }
 
 const getBlogPost = async (postId: string) => {
@@ -15,7 +15,7 @@ const getBlogPost = async (postId: string) => {
 };
 
 const BlogPostPage = async ({ params }: BlogPostParams) => {
-  const { postId } = await params;
+  const { postId } = await params; // No await needed for params
   const { title, completed } = await getBlogPost(postId);
 
   return (
