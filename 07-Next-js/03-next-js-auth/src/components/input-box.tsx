@@ -14,7 +14,7 @@ const InputBox: React.FC<InputBoxProps> = ({
   ref,
 }) => {
   return (
-    <div className="m-2">
+    <div className="w-full">
       <h2 className="text-black mb-2">{label}</h2>
       <div className="text-black px-4 py-2 border rounded-md border-black">
         <input

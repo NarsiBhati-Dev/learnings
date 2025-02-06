@@ -52,7 +52,7 @@ const LoginPage = () => {
           ref={passwordRef}
         />
         <button
-          className="px-4 py-2 bg-black text-white rounded-md m-2"
+          className="px-4 py-2 bg-black text-white rounded-md mt-2 w-full"
           onClick={Login}
         >
           Login
