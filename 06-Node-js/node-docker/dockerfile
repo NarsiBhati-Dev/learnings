@@ -2,9 +2,13 @@ FROM oven/bun:1 AS base
 
 WORKDIR /backend/src
 
-COPY . .
+COPY ./package.json ./package.json
+COPY ./bun.lock ./bun.lock
 
 RUN bun install
+
+COPY . .
+
 
 EXPOSE 3001
 
