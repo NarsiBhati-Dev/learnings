@@ -1,0 +1,20 @@
+{
+  "name": "16-2-websocket",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run --watch ./src/server.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@types/winston": "^2.4.4",
+    "chalk": "^5.4.1",
+    "winston": "^3.17.0"
+  }
+}
